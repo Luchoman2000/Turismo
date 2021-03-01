@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Turismo</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4/dist/photo-sphere-viewer.min.css" />
 
+    <link rel="stylesheet" href="node_modules/photo-sphere-viewer/dist/photo-sphere-viewer.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -65,7 +65,7 @@
                                     <a class="nav-link" href="#">Alojamientos</a>
                                 </li>
                                 <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                    <a class="nav-link" href="#">Expocición de fotos</a>
+                                    <a class="nav-link" href="#">Exposición de fotos</a>
                                 </li>
                             </ul>
                         </div>
@@ -86,11 +86,11 @@
 
                             <h1 class="brand-heading">El valle de los 9 volcanes</h1>
 
-                            <a class="btn btn-light" href="#about">
-                                Observar
-                                <i class="fa fa-chevron-right">
-                                </i>
-                            </a>
+                            <button class="btn btn-light btnObserbar" href="#about">
+                                <span class="spanObserbar">Observar</span> 
+                                <!-- <i class="fa fa-chevron-right"></i> -->
+                                
+                            </button>
 
 
                         </div>
@@ -275,10 +275,10 @@
 
     <!--    Scripts -->
 
+    <script src="node_modules/three/build/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three/build/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/uevent@2/browser.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4.2.0/dist/photo-sphere-viewer.js"
-        integrity="sha256-i/c/U3/PN+hXzvmg5wpvZts6p3iUBo7vciPLUeJs19g=" crossorigin="anonymous"></script>
+    <script src="node_modules/uevent/browser.js"></script>
+    <script src="node_modules/photo-sphere-viewer/dist/photo-sphere-viewer.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/nav.js"></script>
@@ -294,13 +294,14 @@
             navbar: false,
             autorotateSpeed: '1rpm',
             autorotateDelay: '1',
-            minFov: '20'
+            minFov: '20',
             // navbar: [
             //     'hidden'
             // ]
 
 
         });
+        viewer.loader.hide();
     </script>
 </body>
 

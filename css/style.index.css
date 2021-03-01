@@ -6,7 +6,7 @@
   display: block;
   transform: translateY(-50%);
 } */
-.and{
+.and {
     height: 150px;
     width: 100px;
     font-weight: 800;
@@ -25,6 +25,7 @@
     -webkit-transition: all 300ms linear;
     transition: all 300ms linear;
 }
+
 .actividades {
     /* background: #fc9b4c;
     padding: 5%;
@@ -32,7 +33,7 @@
     padding-top: 20%;
     padding-bottom: 20%;
 
-    background: rgb(228,255,227);
+    background: rgb(228, 255, 227);
     background: linear-gradient(0deg, #e4ffe3 0%, #ffffff 100%);
     box-shadow: 0px -5px 20px #ffffff, 0px 5px 20px #e4ffe3;
 
@@ -171,5 +172,82 @@
 @media (max-width: 580px) {
     .hover-target {
         font-size: 60px;
+    }
+}
+
+.btnObserbar {
+    margin: auto;
+    position: relative;
+    outline: none;
+    text-decoration: none;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 50px;
+    width: 210px;
+    opacity: 1;
+    background-color: #ffffff;
+    border: 1px solid rgba(205, 221, 248, 0.6);
+}
+
+.spanObserbar {
+    color: #111111;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+}
+
+.btnObserbar:hover {
+    animation: rotate 0.7s ease-in-out both;
+}
+
+.btnObserbar:hover .spanObserbar {
+    animation: storm 0.7s ease-in-out both;
+    animation-delay: 0.06s;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+
+    25% {
+        transform: rotate(3deg) translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: rotate(-3deg) translate3d(0, 0, 0);
+    }
+
+    75% {
+        transform: rotate(1deg) translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+}
+
+@keyframes storm {
+    0% {
+        transform: translate3d(0, 0, 0) translateZ(0);
+    }
+
+    25% {
+        transform: translate3d(4px, 0, 0) translateZ(0);
+    }
+
+    50% {
+        transform: translate3d(-3px, 0, 0) translateZ(0);
+    }
+
+    75% {
+        transform: translate3d(2px, 0, 0) translateZ(0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0) translateZ(0);
     }
 }
