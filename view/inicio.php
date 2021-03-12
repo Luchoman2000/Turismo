@@ -260,6 +260,7 @@
             panoIndex.once('ready', preloa);
         } 
     </script>
+    
 
 </body>
 
