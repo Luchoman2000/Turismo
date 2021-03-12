@@ -4,7 +4,7 @@
             <div class="col-12">
                 <nav class="navbar navbar-expand-md navbar-light">
 
-                    <a class="navbar-brand" href="<?php echo SERVERURL; ?>index/">
+                    <a class="navbar-brand" href="<?php echo SERVERURL; ?>">
                         <img src="<?php echo SERVERURL ?>view/img/Brand.png">
                     </a>
 
@@ -18,6 +18,7 @@
                                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Bienvenidos a Mejía
                                 </a>
                                 <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Exposicion de fotos</a>
                                     <a class="dropdown-item" href="#">Historia</a>
                                     <a class="dropdown-item" href="#">¿Sabías que?</a>
                                     <a class="dropdown-item" href="#">Ubicación</a>

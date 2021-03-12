@@ -54,11 +54,11 @@
 
                         <h1 class="brand-heading">[Nombre de atractivo turistico]</h1>
 
-                        <button class="btn btn-light btnObserbar" href="#about">
+                        <a class="btn btn-light btnObserbar" href="<?php echo SERVERURL ?>view/contenido/test-view.php" target="_newtab">
                             <span class="spanObserbar">Observar</span>
                             <!-- <i class="fa fa-chevron-right"></i> -->
 
-                        </button>
+                        </a>
 
 
                     </div>
@@ -201,13 +201,11 @@
 
 
 
-
-
     <!--    Scripts -->
+
     <script src="https://cdn.jsdelivr.net/npm/three/build/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uevent@2/browser.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4/dist/photo-sphere-viewer.min.js"></script>
-
     <script src="<?php echo SERVERURL ?>view/js/jquery.min.js"></script>
     <script src="<?php echo SERVERURL ?>view/js/bootstrap.min.js"></script>
     <script src="<?php echo SERVERURL ?>view/js/nav.js"></script>
@@ -247,7 +245,7 @@
                     preloader.style.opacity -= 0.1;
                 } else {
                     clearInterval(fadeEffect);
-                    document.getElementById('preloader').style.zIndex = '-20';
+                    document.getElementById('preloader').style.zIndex = '-999';
                 }
                 
             }, 200);
