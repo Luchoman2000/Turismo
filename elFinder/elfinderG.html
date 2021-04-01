@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <title>elFinder 2.1.x source version with PHP connector</title>
+
+    <!-- Require JS (REQUIRED) -->
+    <!-- Rename "main.default.js" to "main.js" and edit it if you need configure elFInder options or any things -->
+    <script data-main="./main.default.js" src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js">
+    </script>
+    <script>
+        // $().ready(function () {
+        //     var elf = $('#elfinder').elfinder({
+        //         url: 'php/connector.php', // connector URL (REQUIRED)
+        //         getFileCallback: function (file) {
+        //             window.opener.processFile(file);
+        //             window.close();
+        //         },
+        //         resizable: false
+        //     }).elfinder('instance');
+        // });
+        $().ready(function () {
+            var filesArr = [];
+            $('#elfinder').elfinder({
+
+                url: '../elFinder/php/connector.minimal.php',
+                commandsOptions: {
+                    getfile: {
+                        multiple: true
+                    }
+                },
+                getFileCallback: function (file) {
+                    var urls = $.map(file, function (f) {
+                        return f.url;
+                    });
+                    console.log(urls);
+                },
+                // handlers: {
+                //     dialogopen: function (e, fm) {
+                //         var dialog = e.data.dialog,
+                //             elfNode;
+                //         if (dialog.hasClass('elfinder-dialog-edit')) {
+                //             elfNode = fm.getUI();
+                //             dialog.css({
+                //                 top: 0,
+                //                 left: 0,
+                //                 width: elfNode.width(),
+                //                 height: elfNode.height()
+                //             }).trigger('resize', {
+                //                 init: true
+                //             });
+                //         }
+                //     }
+                // }
+                // getFileCallback: function (file) {
+                //     $('#editor').dialogelfinder('close');
+                //     console.log(file.url);
+                // }
+
+            }).elfinder('instance');
+        });
+        // $().ready(function () {
+        //     $('#elfinder').elfinder({
+        //         // set your elFinder options here
+        //         url: '../elFinder/php/connector.minimal.php', // connector URL
+        //         dialog: {
+        //             width: 900,
+        //             modal: true,
+        //             title: 'Select a file'
+        //         },
+        //         resizable: false,
+        //         commandsOptions: {
+        //             getfile: {
+        //                 oncomplete: 'destroy',
+        //                 // folders: true,
+        //                 // multiple: true
+        //             }
+        //         },
+        //         getFileCallback: function (file) {
+        //             var urls = $.map(file, function (f) {
+        //                 return f.url;
+        //             });
+        //             console.log(urls);
+        //             window.parent.processSelectedFile(file.path);
+        //             parent.jQuery.colorbox.close();  
+        //         }
+        //     }).elfinder('instance');
+        // });
+    </script>
+</head>
+
+<body>
+    <!-- <button id="imagenPortadaG">test</button> -->
+    <!-- Element where elFinder will be created (REQUIRED) -->
+    <div id="elfinder"></div>
+
+</body>
+
+
+</html>

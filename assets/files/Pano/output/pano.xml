@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<panorama id="node1" apprev="18007" hideabout="1" appversion="6.1.10">
+  <input leveltilesize="510" levelbiashidpi="1.000" levelingroll="0" width="2048" leveltileurl="tiles/node1/cf_%c/l_%l/c_%x/tile_%y.jpg" levelbias="0.400" height="2048" overlap="1" levelingpitch="0">
+    <level preload="0" predecode="0" width="2048" height="2048"/>
+    <level preload="0" predecode="0" width="1024" height="1024"/>
+    <level preload="0" predecode="0" width="512" height="512"/>
+    <level preload="1" predecode="1" width="256" height="256"/>
+    <preview strip="1" color="0x808080"/>
+  </input>
+  <view pannorth="0" fovmode="3">
+    <start fov="86.0671" pan="0" tilt="0" projection="4"/>
+    <flyin fov="170" pan="0" tilt="-90" projection="9"/>
+    <min fov="2" pan="0" tilt="-90"/>
+    <max scaletofit="1" fov="120" pan="360" tilt="90" fovstereographic="270" fovfisheye="360"/>
+  </view>
+  <userdata author="" info="" latitude="-0.555790" comment="" title="default" datetime="1/1/1970 0:00" altitude="3545.00" heading="0" description="" longitude="-78.633493" customnodeid="" source="" tags="imagenes" nodeid="node1" copyright=""/>
+  <hotspots wordwrap="1" width="180" height="20">
+    <label wordwrap="1" textalpha="1" borderalpha="1" backgroundcolor="0xffffff" borderradius="1" textcolor="0x000000" width="180" bordercolor="0x000000" height="20" enabled="1" backgroundalpha="1" background="1" border="1"/>
+    <polystyle borderalpha="1" backgroundcolor="0x0000ff" mode="0" bordercolor="0x0000ff" handcursor="1" backgroundalpha="0.25098"/>
+    <polyhotspot id="Poly01" title="" description="" target="-119.0/-19.3/70.0" url="">
+      <polystring>-71.93/-16.54|-76.95/-17.32|-79.84/-19.62|-83.48/-18.97|-84.97/-17.42|-88.09/-18.71|-93.65/-17.46|-97.45/-18.9|-103.34/-16.95|-109.45/-18.52|-120.16/-19.1|-124.77/-17.11|-130.44/-19.29|-135.72/-17.65|-140.99/-17.21|-143.25/-15.34|-152.61/-12.65|-156.61/-13.06|-163.3/-10.26|-161.42/-8.35|-87.98/-13.05|-76.11/-14.93|-76.02/-14.48|-75.81/-14.44</polystring>
+    </polyhotspot>
+  </hotspots>
+  <media>
+    <lensflare id="Lensflare01" type="2" pan="-195.210" color="0xffffff" tilt="84.540" blinding="50.000" alpha="80.000"/>
+  </media>
+  <transition type="crossdissolve" zoomfov="20" zoomout="0" blendcolor="0x000000" zoomafteroutfov="20" zoomoutpause="1" blendtime="1" enabled="1" zoomin="0" zoomafterinfov="90" softedge="0" zoomspeed="2"/>
+  <flyintransition speed="1.01" enabled="1"/>
+  <animation syncanimationwithvideo="0" useinautorotation="0" animsequence="Animation01"/>
+  <control simulatemass="1" lockedkeyboardzoom="0" rubberband="0" lockedkeyboard="0" invertwheel="0" sensitivity="5" hideabout="1" lockedwheel="0" speedwheel="2" dblclickfullscreen="0" contextprojections="0" lockedmouse="0" contextfullscreen="1" invertcontrol="1"/>
+</panorama>

@@ -1,5 +1,4 @@
 
-
 /* audio, canvas, iframe, img, svg, video {
   vertical-align: middle;
 }
@@ -19,9 +18,20 @@ audio, canvas, img, video {
 
 
 
-
-
 footer {
+  
+  
+  margin-top: 50px;
+  position: inherit;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.linea_pie{
+  position: relative;
+}
+
+.fo {
 
   background-image: url(https://municipiodemejia.gob.ec/assets/fondo_pie_1.jpg);
   background-color: #000000;
@@ -32,6 +42,10 @@ footer {
   font: bold 16px sans-serif;
   padding: 35px 35px;
   color: rgb(94, 94, 94);
+  
+  /* position: static; */
+  /* position: initial; */
+
 }
 
 .footer-navigation h3 {
@@ -57,9 +71,11 @@ footer {
   margin-top: 20px;
   text-align: center;
 }
-.footer-contacts-icon{
+
+.footer-contacts-icon {
   text-align: left;
 }
+
 @media (max-width:767px) {
   .footer-contacts {
     margin: 30px 0;
@@ -70,7 +86,7 @@ footer {
   display: inline-block;
   color: rgb(58, 58, 58);
   vertical-align: middle;
-  
+
 }
 
 .footer-contacts p a {
@@ -134,7 +150,3 @@ div.social-links {
   margin-right: 5px;
   margin-bottom: 5px;
 }
-
-
-
-

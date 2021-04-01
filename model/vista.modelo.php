@@ -6,17 +6,18 @@ class VistasModelo
 	{
 
         // URLs permitidas
-		$listaBlanca = ["admin", "adminlist", "adminsearch", "adminup", "book", "bookconfig",
-         "bookinfo", "catalog", "category", "categorylist", "client", "clientlist", "clientsearch", 
-         "company", "companylist", "deleteuser", "home", "login", "myaccount", "mydata", "provider", 
-         "providerlist", "search", "404","home"];
+		$listaBlanca = ["atractivosnaturales","home","admin","exposicionfotos","gastronomia","sabiasque","historia","ubicacion","atractivosculturales","natural"];
 
 
 		if (in_array($vistas, $listaBlanca)) {
 			if (is_file("./view/contenido/" . $vistas . "-view.php")) {
 				$contenido = "./view/contenido/" . $vistas . "-view.php";
-			} else {
+
+				// echo $contenido;	
+			}
+			else {
 				$contenido = "home";
+				
 			}
 		} 
         // elseif ($vistas == "login") {

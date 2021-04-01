@@ -1,6 +1,3 @@
-/* Please ❤ this if you like it! */
-
-
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext');
 
 /* #Primary
@@ -11,14 +8,16 @@ body {
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
-    /* color: #212112; */
-    /* background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat-back.svg'); */
+    color: #212112;
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat-back.svg');
     /* background-position: center; */
-    /* background-repeat: repeat; */
-    background-size: 7%;
-    /* background-color: #fff; */
+    background-repeat: repeat;
+    background-size: 10%;
+    background-color: #fff;
     overflow-x: hidden;
+
     transition: all 200ms linear;
+
 }
 
 ::selection {
@@ -176,7 +175,7 @@ body {
     width: 100%;
     height: 2px;
     content: '';
-    background-color: #8167a9;
+    background-color: #4b6b9b;
     opacity: 0;
     transition: all 200ms linear;
     /* background-color:  red; */
@@ -246,7 +245,7 @@ p {
     transition-delay: 1700ms;
 } */
 
-body.hero-anime p {
+/* body.hero-anime p {
     opacity: 0;
     transform: translateY(40px);
     transition-delay: 1700ms;
@@ -392,7 +391,7 @@ h1 span:nth-child(14) {
 
 h1 span:nth-child(15) {
     transition-delay: 1450ms;
-}
+} */
 
 /* #switch,
 #circle {
@@ -492,7 +491,7 @@ body.hero-anime #switch {
 .dropdown-item:hover,
 .dropdown-item:focus {
     color: #fff;
-    background-color: rgba(129, 103, 169, .6);
+    background-color: rgba(62, 73, 136, 0.6);
 }
 
 
@@ -503,6 +502,11 @@ body.hero-anime #switch {
 ================================================== */
 
 @media (max-width: 768px) {
+    .start-header {
+        background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(211, 231, 245, 0.858) 100%);
+
+    }
+
     h1 {
         font-size: 38px;
     }
@@ -513,6 +517,7 @@ body.hero-anime #switch {
 
     .nav-item:after {
         display: none;
+
     }
 
     .nav-item::before {
@@ -595,13 +600,13 @@ body.hero-anime #switch {
     display: table;
 } */
 
-.test{
+.test {
     padding: 0;
     /* background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiyL6KPon6-UzRfdYqj1TvMIyH9qe3fvayUQ&usqp=CAU') repeat fixed; */
     /* background-size: cover; 
     margin-top: 30%;
     */
-    position: absolute; 
+    position: absolute;
     /* top: 0;
     left: 0;
     right: 0;

@@ -1,6 +1,6 @@
 <?php
 if ($peticionAjax) {
-    require_once '../core/configAPP.php';
+    require_once '../../core/configAPP.php';
 } else {
     require_once './core/configAPP.php';
 }
@@ -61,45 +61,75 @@ class mainModel
         return $cadena;
     }
 
-    protected function sweet_alert($datos)
+    protected function makeSlug(String $url)
     {
-        if ($datos['alerta'] == "simple") {
-            $alerta = "<script>
-            swal(
-                '" . $datos['Titulo'] . "',
-                '" . $datos['Texto'] . "',
-                '" . $datos['Tipo'] . "',
-            )
-            </script>";
-        } elseif ($datos['alerta' == "recargar"]) {
-            $alerta = "
-            <script>
-            swal({
-                title:'" . $datos['Titulo'] . "',
-                text:'" . $datos['Texto'] . "',
-                icon:'" . $datos['Tipo'] . "',
-                confirmButtonColor:'#3085d6',
-                confirmButtonText:'Aceptar'
-            }). then((function){
-                    location.reload();
+        $url = strtolower($url);
+        // $slug = preg_replace('/[^A-Za-z0-9-]+/', '-', $url);
+        // Reemplazamos caracteres latinos (tildes y eñes)
+        $find = array('á', 'é', 'í', 'ó', 'ú', 'ñ');
+        $replace = array('a', 'e', 'i', 'o', 'u', 'n');
+        $url = str_replace($find, $replace, $url);
 
-            });
-            </script>";
-        } elseif ($datos['alerta' == "limpiar"]) {
-            $alerta = "
-            <script>
-            swal({
-                title:'" . $datos['Titulo'] . "',
-                text:'" . $datos['Texto'] . "',
-                icon:'" . $datos['Tipo'] . "',
-                confirmButtonColor:'#3085d6',
-                confirmButtonText:'Aceptar'
-            }). then((function){
-                    $('.FormularioAjax')[0].reset();
+        // Añadimos guiones
+        $find = array(' ', '&', '\r\n', '\n', '+');
+        $url = str_replace($find, '-', $url);
 
-            });
-            </script>";
-        }
-        return $alerta;
+        // Reemplazamos resto de caracteres distintos de letras y números
+        $find = array('/[^a-z0-9\-<>]/', '/[\-]+/', '/<[^>]*>/');
+        $replace = array('', '-', '');
+        $url = preg_replace($find, $replace, $url);
+        return $url;
     }
+
+    /*---------- Funcion verificar datos (expresion regular) - Check data function (regular expression) ----------*/
+    protected static function verificar_datos($filtro, $cadena)
+    {
+        if (preg_match("/^" . $filtro . "$/", $cadena)) {
+            return false;
+        } else {
+            return true;
+        }
+    } /*--  Fin Funcion - End Function --*/
+
+    // protected function sweet_alert($datos)
+    // {
+    //     if ($datos['alerta'] == "simple") {
+    //         $alerta = "<script>
+    //         swal.fire(
+    //             '" . $datos['Titulo'] . "',
+    //             '" . $datos['Texto'] . "',
+    //             '" . $datos['Tipo'] . "',
+    //         )
+    //         </script>";
+    //     } elseif ($datos['alerta' == "recargar"]) {
+    //         $alerta = "
+    //         <script>
+    //         swal.fire({
+    //             title:'" . $datos['Titulo'] . "',
+    //             text:'" . $datos['Texto'] . "',
+    //             icon:'" . $datos['Tipo'] . "',
+    //             confirmButtonColor:'#3085d6',
+    //             confirmButtonText:'Aceptar'
+    //         }). then((function){
+    //                 location.reload();
+
+    //         });
+    //         </script>";
+    //     } elseif ($datos['alerta' == "limpiar"]) {
+    //         $alerta = "
+    //         <script>
+    //         swal.fire({
+    //             title:'" . $datos['Titulo'] . "',
+    //             text:'" . $datos['Texto'] . "',
+    //             icon:'" . $datos['Tipo'] . "',
+    //             confirmButtonColor:'#3085d6',
+    //             confirmButtonText:'Aceptar'
+    //         }). then((function){
+    //                 $('.FormularioAjax')[0].reset();
+
+    //         });
+    //         </script>";
+    //     }
+    //     return $alerta;
+    // }
 }
